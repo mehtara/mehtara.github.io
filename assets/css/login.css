@@ -1,0 +1,1107 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: "Mehtara";
+    src: url('../fonts/JF-Flat-regular.eot');
+    src: url('../fonts/JF-Flat-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/JF-Flat-regular.svg#JF Flat Regular') format('svg'), url('../fonts/JF-Flat-regular.woff') format('woff'), url('../fonts/JF-Flat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Mehtara';
+    background-color: #302D37;
+    background-image: url(../img/abst.png);
+    background-repeat: repeat-x;
+    background-position: top;
+    direction: rtl;
+}
+
+.containerBody {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* Intro Body */
+
+.introbody {
+    text-align: center;
+}
+
+.intro-logo img {
+    width: 200px;
+    margin-top: 50px;
+}
+
+.girl-vect img {
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.login-button .newlogin {
+    background-color: #F4E3BD;
+    color: #302D37;
+    border-radius: 4px;
+    padding: 12px 0;
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    text-decoration: none
+}
+
+.login-button .newlogin:hover {
+    text-decoration: none;
+}
+
+.login-button .loginbtn {
+    color: #f4e3bd;
+    font-size: 12px;
+}
+
+.userchain {
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.userchain ul {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.userchain ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.userchain ul li img {
+    width: 50px;
+}
+
+
+/* Log in*/
+
+.login-body {
+    width: 400px;
+    background-color: #fff;
+    margin: 100px auto 40px auto;
+    border-radius: 4px;
+}
+
+
+/* Container */
+
+.container {
+    position: relative;
+    max-width: 460px;
+    width: 100%;
+    margin: 0 auto 0px;
+}
+
+.container.active .card:first-child {
+    background: #f2f2f2;
+    margin: 0 15px;
+}
+
+.container.active .card:nth-child(2) {
+    background: #fafafa;
+    margin: 0 10px;
+}
+
+.container.active .card.alt {
+    top: 20px;
+    right: 0;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding: 8px 0 55px;
+    overflow: hidden;
+}
+
+.container.active .card.alt .toggle {
+    position: absolute;
+    top: 150px;
+    right: 120px;
+    box-shadow: none;
+    -webkit-transform: scale(10);
+    transform: scale(10);
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.container.active .card.alt .toggle i.flaticon-user-2 {
+    display: none;
+}
+
+.container.active .card.alt .title,
+.container.active .card.alt .input-container,
+.container.active .card.alt .button-container {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.container.active .card.alt .title {
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s;
+}
+
+.container.active .card.alt .input-container {
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s;
+}
+
+.container.active .card.alt .input-container:nth-child(2) {
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s;
+}
+
+.container.active .card.alt .input-container:nth-child(3) {
+    -webkit-transition-delay: .6s;
+    transition-delay: .6s;
+}
+
+.container.active .card.alt .button-container {
+    -webkit-transition-delay: .7s;
+    transition-delay: .7s;
+}
+
+
+/* Card */
+
+.card {
+    position: relative;
+    background-color: #ffffff;
+    background-image: url('../img/q.png');
+    border-radius: 5px;
+    padding: 20px 0 10px 0;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    background-repeat: no-repeat;
+    background-position: 85% 100%;
+    background-size: 40%;
+    /* Title */
+    /* Inputs */
+    /* Button */
+    /* Footer */
+    /* Alt Card */
+}
+
+.card:first-child {
+    background: #fafafa;
+    height: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: 0 10px;
+    padding: 0;
+}
+
+.card .title {
+    position: relative;
+    z-index: 1;
+    border-left: 5px solid #302D37;
+    margin: 0;
+    padding: 10px 0 10px 0px;
+    color: #302D37;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card .spantit {
+    display: block;
+    text-align: center;
+}
+
+.card form {
+    margin-top: 30px;
+}
+
+.card .input-container {
+    position: relative;
+    margin: 0 60px 20px;
+}
+
+.card .input-container .user-img,
+.card .input-container .lock {
+    width: 26px;
+    position: absolute;
+    bottom: 5px;
+}
+
+.card .input-container .user-img {
+    width: 21px;
+}
+
+.card .input-container input {
+    outline: none;
+    z-index: 1;
+    position: relative;
+    background: none;
+    width: 100%;
+    height: 35px;
+    border: 0;
+    color: #212121;
+    font-size: 14px;
+    font-weight: 400;
+    padding-right: 40px;
+}
+
+.card .input-container input:focus ~ label {
+    color: #9d9d9d;
+    -webkit-transform: translate(10%, -50%) scale(0.75);
+    transform: translate(10%, -50%) scale(0.75);
+}
+
+.card .input-container input:focus ~ .bar:before,
+.card .input-container input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.card .input-container input:valid ~ label {
+    color: #9d9d9d;
+    -webkit-transform: translate(10%, -50%) scale(0.75);
+    transform: translate(10%, -50%) scale(0.75);
+}
+
+.card .input-container label {
+    position: absolute;
+    top: 0;
+    right: 35px;
+    color: #C3BFBF;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 35px;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+.card .input-container .bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #eee;
+    width: 100%;
+    height: 1px;
+}
+
+.card .input-container .bar:before,
+.card .input-container .bar:after {
+    content: '';
+    position: absolute;
+    background: #AA3763;
+    width: 0;
+    height: 2px;
+    -webkit-transition: .2s ease;
+    transition: .2s ease;
+}
+
+.card .input-container .bar:before {
+    left: 50%;
+}
+
+.card .input-container .bar:after {
+    right: 50%;
+}
+
+.card .button-container {
+    margin: 0 60px;
+    text-align: center;
+}
+
+.card .button-container button {
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background: #AA3763;
+    font-family: "Mehtara";
+    width: 280px;
+    border: 2px solid #AA3763;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    overflow: hidden;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    border-radius: 4px;
+}
+
+.card .button-container button span {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.card .button-container button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    background: #ed2553;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: -15px 0 0 -15px;
+    opacity: 0;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.card .button-container button:hover,
+.card .button-container button:active,
+.card .button-container button:focus {
+    border-color: #AA3763;
+    background: 0;
+}
+
+.card .button-container button:hover span,
+.card .button-container button:active span,
+.card .button-container button:focus span {
+    color: #ad7f83;
+}
+
+.card .button-container button:active span,
+.card .button-container button:focus span {
+    color: #ad7f83;
+}
+
+.card .button-container button:active:before,
+.card .button-container button:focus:before {
+    opacity: 1;
+    -webkit-transform: scale(10);
+    transform: scale(10);
+}
+
+.card .footer {
+    margin: 10px auto;
+    color: #d3d3d3;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    width: 280px;
+    height: 30px;
+}
+
+.card .footer a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    font-size: 12px;
+    color: #393544;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+}
+
+.card .footer a:hover {
+    color: #bababa;
+}
+
+.card .footer .remeber {
+    float: right;
+    height: 28px;
+    line-height: 28px;
+}
+
+.card .footer .remeber input[type="checkbox"] {
+    margin: 7px 5px;
+    float: right;
+}
+
+.card .footer .remeber label {
+    font-size: 12px;
+    color: #393544;
+    float: right;
+}
+
+.card.alt {
+    position: absolute;
+    top: 40px;
+    right: -38px;
+    z-index: 10;
+    width: 70px;
+    height: 70px;
+    background: none;
+    border-radius: 100%;
+    box-shadow: none;
+    padding: 0;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    /* Toggle */
+    /* Title */
+    /* Input */
+    /* Button */
+}
+
+.card.alt .toggle {
+    position: relative;
+    background: #AA3763;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 70px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card.alt .toggle::before {
+    position: absolute;
+    content: "تسجيل جديد";
+    bottom: -12px;
+    background: #aa3763;
+    font-size: 11px;
+    width: 70px;
+    height: 20px;
+    line-height: 20px;
+    left: 0;
+    border-radius: 6px;
+}
+
+.card.alt .title,
+.card.alt .input-container,
+.card.alt .button-container {
+    left: 100px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card.alt .title {
+    position: relative;
+    border-color: #ffffff;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.card.alt .title .close {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 16px;
+    display: inline;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.card.alt .title .close:before {
+    content: '\00d7';
+}
+
+.card.alt .input-container input {
+    color: #ffffff;
+}
+
+.card.alt .input-container input:focus ~ label {
+    color: #ffffff;
+}
+
+.card.alt .input-container input:focus ~ .bar:before,
+.card.alt .input-container input:focus ~ .bar:after {
+    background: #ffffff;
+}
+
+.card.alt .input-container input:valid ~ label {
+    color: #ffffff;
+}
+
+.card.alt .input-container label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card.alt .input-container .bar {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.card.alt .button-container button {
+    width: 100%;
+    background: #ffffff;
+    border-color: #ffffff;
+}
+
+.card.alt .button-container button span {
+    color: #ed2553;
+}
+
+.card.alt .button-container button:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.card.alt .button-container button:active:before,
+.card.alt .button-container button:focus:before {
+    display: none;
+}
+
+
+/* Keyframes */
+
+@-webkit-keyframes buttonFadeInUp {
+    0% {
+        bottom: 30px;
+        opacity: 0;
+    }
+}
+
+@keyframes buttonFadeInUp {
+    0% {
+        bottom: 30px;
+        opacity: 0;
+    }
+}
+
+.social {
+    border-top: 1px solid #eee;
+    width: 280px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.social p {
+    position: absolute;
+    background: #fff;
+    top: -10px;
+    font-size: 12px;
+    color: #999;
+    padding: 0 15px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 50px;
+}
+
+.social ul {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+
+/* reg */
+
+.reg-body {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.regInfo {
+    margin: 40px auto;
+}
+
+.regInfo img {
+    float: left;
+    margin-left: 40px;
+}
+
+.regInfo .ourWord {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.regInfo .ourWord h3 {
+    font-size: 28px;
+    margin: 45px auto 5px;
+    text-align: center;
+}
+
+.regInfo .ourWord h3 span {
+    color: #368cc7;
+}
+
+.ourWord p {
+    text-align: center;
+    padding: 0 35px;
+    line-height: 24px;
+}
+
+.reg-box {
+    background: #fff;
+    border-radius: 4px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.reg-right {
+    width: 300px;
+    float: right;
+    padding: 20px 20px 20px 5px;
+}
+
+.reg-right h1.title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #2c2934;
+}
+
+.reg-right form {
+    margin-top: 15px;
+}
+
+.reg-right .input-container {
+    position: relative;
+    margin: 0 0px 9px;
+}
+
+.reg-right .input-container .user-img,
+.reg-right .input-container .lock {
+    width: 26px;
+    position: absolute;
+    bottom: 5px;
+}
+
+.reg-right .input-container .user-img {
+    width: 21px;
+}
+
+.reg-right .input-container input {
+    outline: none;
+    z-index: 1;
+    position: relative;
+    background: none;
+    width: 100%;
+    height: 35px;
+    border: 0;
+    color: #212121;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.reg-right .input-container input:focus ~ label {
+    color: #9d9d9d;
+    -webkit-transform: translate(10%, -50%) scale(0.75);
+    transform: translate(10%, -50%) scale(0.75);
+}
+
+.reg-right .input-container input:focus ~ .bar:before,
+.reg-right .input-container input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.reg-right .input-container input:valid ~ label {
+    color: #9d9d9d;
+    -webkit-transform: translate(10%, -50%) scale(0.75);
+    transform: translate(10%, -50%) scale(0.75);
+}
+
+.reg-right .input-container label {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    color: #C3BFBF;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 35px;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+.reg-right .input-container .bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #eee;
+    width: 100%;
+    height: 2px;
+}
+
+.reg-right .input-container .bar:before,
+.reg-right .input-container .bar:after {
+    content: '';
+    position: absolute;
+    background: #AA3763;
+    width: 0;
+    height: 2px;
+    -webkit-transition: .2s ease;
+    transition: .2s ease;
+}
+
+.reg-right .input-container .bar:before {
+    left: 50%;
+}
+
+.reg-right .input-container .bar:after {
+    right: 50%;
+}
+
+.reg-right .button-container {
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.reg-right .button-container button {
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background: #AA3763;
+    font-family: "Mehtara";
+    width: 280px;
+    border: 2px solid #AA3763;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    overflow: hidden;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.reg-right .button-container button span {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.reg-right .button-container button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    background: #ed2553;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: -15px 0 0 -15px;
+    opacity: 0;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.reg-right .button-container button:hover,
+.reg-right .button-container button:active,
+.reg-right .button-container button:focus {
+    border-color: #AA3763;
+    background: 0;
+}
+
+.reg-right .button-container button:hover span,
+.reg-right .button-container button:active span,
+.reg-right .button-container button:focus span {
+    color: #ad7f83;
+}
+
+.reg-right .button-container button:active span,
+.reg-right .button-container button:focus span {
+    color: #ad7f83;
+}
+
+.reg-right .button-container button:active:before,
+.reg-right .button-container button:focus:before {
+    opacity: 1;
+    -webkit-transform: scale(10);
+    transform: scale(10);
+}
+
+.reg-right .input-container input {
+    color: #9a989f;
+}
+
+.reg-right .input-container input:focus ~ label {
+    color: #9a989ff;
+}
+
+.reg-right .input-container input:focus ~ .bar:before,
+.reg-right .input-container input:focus ~ .bar:after {
+    background: #9a989f;
+}
+
+.reg-right .input-container input:valid ~ label {
+    color: #9a989f;
+}
+
+.reg-right .input-container label {
+    color: #9a989f;
+}
+
+.reg-right .input-container .bar {
+    background: #f3f3f3;
+}
+
+.reg-right .button-container button:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.reg-right .button-container button:active:before,
+.reg-right .button-container button:focus:before {
+    display: none;
+}
+
+.reg-right p {
+    font-size: 12px;
+    color: #2c2934;
+    font-weight: 600;
+    line-height: 19px;
+}
+
+.reg-left {
+    width: 240px;
+    float: left;
+    padding: 113px 15px 40px 15px;
+    background-color: #f3f3f3;
+    background-image: url('../img/q2.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 150px;
+    height: 100%;
+}
+
+.reg-left h3 {
+    font-size: 14px;
+    font-weight: 800;
+    color: #2c2934;
+    margin-bottom: 20px;
+}
+
+a.facebook {
+    background: #3b5998;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+}
+
+a.twiter {
+    background: #55acee;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.reg-left .sep {
+    border-top: 1px solid #e3e3e3;
+    margin: 20px auto 20px;
+    position: relative;
+}
+
+.reg-left span {
+    display: block;
+    text-align: center;
+    width: 30px;
+    background: #FCFCFC;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -10px;
+    color: #9490a0;
+}
+
+.reg-left p {
+    font-size: 12px;
+    color: #2c2934;
+    font-weight: 600;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.copyright {
+    color: #1982ed;
+    text-decoration: none;
+}
+
+.reg-right p.cop {
+    line-height: 13px;
+}
+
+
+/* Footer */
+
+footer.footer {
+    border-top: 1px solid #393544;
+    height: 30px;
+    line-height: 30px;
+    position: fixed;
+    bottom: 0;
+    max-width: 900px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+footer.footer a {
+    text-decoration: none;
+    color: #f4e3bd;
+    font-size: 12px;
+}
+
+footer.footer a.aboutM {
+    float: right
+}
+
+footer.footer a.copyright {
+    float: left;
+}

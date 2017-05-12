@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Report</title>
+    <style>
+        @page {
+            size: landscape;
+            @bottom-right {
+                content: "Page " counter(page) " of " counter(pages);
+            }
+        }
+        
+        @font-face {
+            font-family: "Sukar Regular";
+            src: url('fonts/Sukar-Regular.eot');
+            src: url('fonts/Sukar-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/Sukar-Regular.svg#Sukar-Regular') format('svg'), url('fonts/Sukar-Regular.woff') format('woff'), url('fonts/Sukar-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+        
+        body {
+            line-height: 1;
+        }
+        
+        ol,
+        ul {
+            list-style: none;
+        }
+        
+        blockquote,
+        q {
+            quotes: none;
+        }
+        
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: "";
+            content: none;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            font-family: "Sukar Regular";
+            background-color: #f2f4f4;
+        }
+        
+        .logo img {
+            display: block;
+            margin: 20px auto;
+            width: 130px;
+        }
+        
+        .reportContainer {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .table {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .table tr td label {
+            font-weight: 800;
+        }
+        
+        .table td {
+            background: #1ed085 none repeat scroll 0 0;
+            border-bottom: 2px solid #128655;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        .fieldsetParent {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 0 #e6e6e6;
+            overflow: hidden;
+        }
+        
+        fieldset {
+            border: 1px solid #eee;
+            margin: 10px;
+            padding: 6px;
+            display: block;
+        }
+        
+        legend {
+            padding: 0.2em 0.5em;
+            color: #333;
+            font-size: 18px;
+            text-align: right;
+            margin-right: 10px;
+        }
+        
+        fieldset table {
+            border: 0 solid #fff;
+            width: 100%;
+        }
+        
+        fieldset table td {
+            background: #eee none repeat scroll 0 0;
+            border: 5px solid #fff;
+            padding: 11px 15px;
+        }
+        
+        #SalaryTable {
+            font-size: 14px;
+            background-color: #fff;
+        }
+        
+        #SalaryTable > table > thead > tr > th {
+            background: #f2f4f3 none repeat scroll 0 0;
+            border-color: #cfd8d8 -moz-use-text-color;
+            border-style: solid none;
+            border-width: 1px medium;
+            color: #81949d;
+            padding: 11px 0px 11px 5px;
+            position: relative;
+        }
+        
+        #SalaryTable > table > thead > tr > th::before {
+            color: #b9c4c4;
+            content: "|";
+            left: 0;
+            position: absolute;
+        }
+        
+        #SalaryTable > table > thead > tr > th:last-child::before {
+            display: none;
+        }
+        
+        #SalaryTable > table > thead > tr > th:first-child {
+            width: 20%;
+        }
+        #SalaryTable > table > tbody > tr:hover td{
+            background: #E4FBF1;
+            cursor: pointer;
+            color: #24A66E;
+            
+        }
+        #SalaryTable > table > tbody > tr > td {
+            background-color: #fff;
+            border-color: -moz-use-text-color -moz-use-text-color #e7ebeb;
+            border-style: none none solid;
+            border-width: medium medium 1px;
+            padding: 11px 15px;
+        }
+        
+        
+        #create_pdf{
+            width: 150px;
+            border-radius: 4px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            background-color: #d65554;
+            margin:0 auto 20px auto;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reportContainer">
+        <div class="logo"> <img src="logo.png"> </div>
+        <table class="table">
+            <tr>
+                <td>
+                    <label class="name"> رقم التقرير : </label> <span class="datainfo">HR 050207</span></td>
+                <td>
+                    <label class="name"> المستخدم : </label> <span class="datainfo">HR 050207</span></td>
+                <td>
+                    <label class="name"> تاريخ الطباعة : </label> <span class="datainfo">18/8/2016 </span></td>
+            </tr>
+        </table>
+        <div style="clear:both; height:25px;"></div>
+        <div class="fieldsetParent">
+            <fieldset>
+                <legend> البيانات الاساسية : </legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="name"> رقم مسير الرواتب : </label> <span class="datainfo">1</span></td>
+                        <td>
+                            <label class="name"> تاريخ المسير : </label> <span class="datainfo">15/8/2016</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="name"> شهر : </label> <span class="datainfo">5</span></td>
+                        <td>
+                            <label class="name"> سنة : </label> <span class="datainfo">2016</span></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div style="clear:both; height:25px;"></div>
+        <div class="fieldsetParent">
+            <fieldset>
+                <legend> تفاصيل مسير الرواتب : </legend>
+                <div id="SalaryTable">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>رقم الموظف</th>
+                                <th>ﺍﻟﺮﺍﺗﺐ ﺍﻷﺳﺎﺳﻲ</th>
+                                <th>ﺍﻟﺒﺪﻻﺕ </th>
+                                <th>ﺍﻧﺘﺪﺍﺏ ﺩﺍﺧﻠﻲ</th>
+                                <th>ﺍﻧﺘﺪﺍﺏ ﺧﺎﺭﺟﻲ</th>
+                                <th>ﺧﺎﺭﺝ ﺩﻭﺍﻡ ﺃﻳﺎﻡ ﺍﻋﺘﻴﺎﺩﻳﺔ</th>
+                                <th>ﺧﺎﺭﺝ ﺩﻭﺍﻡ ﺃﻳﺎﻡ ﺍﻟﻌﻄﻼﺕ ﺍﻟﺮﺳﻤﻴﺔ</th>
+                                <th>ﺍﻟﻤﻜﺎﻓﺂﺕ </th>
+                                <th>ﺍﻟﻤﺨﺎﻟﻔﺎﺕ </th>
+                                <th>ﺍﻟﺴﻠﻒ </th>
+                                <th>ﺳﺎﻋﺎﺕ ﺍﻟﺤﺴﻢ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td> (301) ﻋﺒﺪﺍﻟﺮﺣﻤﻦ ﻓﻬﺪ ﻣﻜﻲ ﺷﻤﺲ </td>
+                                <td>7000.00</td>
+                                <td>0.00 </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </fieldset>
+        </div>
+        <div style="clear:both; height:25px;"></div>
+        <div class="" id="create_pdf">Create PDF</div>
+        <script src="jquery.js"></script>
+        <script src="jspdf.min.js"></script>
+        <script type="text/javascript" src="html2canvas.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </div>
+</body>
+
+</html>

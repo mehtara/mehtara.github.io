@@ -1,0 +1,140 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mehtara - login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Site For Women Only">
+    <meta name="author" content="AHmed Nour (UI Developer) & Basem khairt (PHP developer)">
+
+    <link rel="apple-touch-icon" href="[INSERT apple-tuch-icon.png]">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+
+
+    <! -- WE ASSUME YOU ARE USING A main.css FOR CSS CUSTOMIZATION -->
+    <link rel="stylesheet" href="assets/css/login.css">
+
+</head>
+
+<body>
+
+    <!--[if IE]>
+        <script src="assets/js/html5-3.6-respond-1.4.2.min.js"></script>
+    
+    <![endif]-->
+
+    <!-- Start coding here -->
+    <div class="containerBody">
+        <section class="login-body">
+            <div class="container">
+                <div class="card"></div>
+                <div class="card">
+                    <h1 class="title">مرحبا بكي !</h1>
+                    <span class="spantit">سجلي الدخول بالاكونت الخاص بكي </span>
+                    <form>
+                        <div class="input-container">
+                            <img src="assets/img/user.png" class="user-img">
+                            <input type="text" id="Username" required="required" />
+                            <label for="Username">اكتبي ايميلك الخاص بكي</label>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="input-container">
+                            <img src="assets/img/lock.png" class="lock">
+                            <input type="password" id="Password" required="required" />
+                            <label for="Password">اكتبي كلمه المرور الخاصه بكي </label>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="button-container">
+                            <button><span>سجلي دخولك</span></button>
+                        </div>
+                        <div class="footer">
+                            <div class="remeber">
+                                <input type="checkbox">
+                                <label> تذكرني </label>
+                            </div>
+                            <a href="#">نسيتي كلمة السر؟</a>
+                        </div>
+                        <div class="social">
+                            <p class="socialheader">سجلي بـ</p>
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="assets/img/facebook.png" alt="facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="assets/img/twitter.png" alt="facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="assets/img/google-plus.png" alt="facebook"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="card alt">
+                    <div class="toggle"><i class="flaticon-user-2"></i></div>
+                    <h1 class="title">الرجاء إدخال البيانات االمطلوبه الاتيه : <div class="close"></div></h1>
+                    <form>
+                        <div class="input-container">
+                            <input type="text" id="Username" required="required" />
+                            <label for="Username">أدخلي اسم مستعار</label>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" id="Password" required="required" />
+                            <label for="Password">ادخلي الاسم بالكامل</label>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" id="Repeat Password" required="required" />
+                            <label for="Repeat Password">ادخلي البريد الالكتروني </label>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" id="Repeat Password" required="required" />
+                            <label for="Repeat Password">ادخلي الرقم السري </label>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="button-container">
+                            <button><span>تسجيل</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </section>
+        <footer class="footer">
+            <a href="#" class="aboutM">عن محتارة</a>
+            <a href="#" class="copyright">الحقوق محفوظة محتارة 2016</a>
+        </footer>
+    </div>
+
+    <!-- Coding End -->
+
+    <script src="assets/js/jquery.js"></script>
+
+    <script type="text/javascript">
+        $("document").ready(function () {
+
+            $('.toggle').on('click', function () {
+                $('.container').stop().addClass('active');
+            });
+
+            $('.close').on('click', function () {
+                $('.container').stop().removeClass('active');
+            });
+
+        });
+    </script>
+</body>
+
+</html>
